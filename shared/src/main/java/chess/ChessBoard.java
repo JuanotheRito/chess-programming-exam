@@ -1,6 +1,5 @@
 package chess;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Objects;
 
@@ -54,13 +53,7 @@ public class ChessBoard {
     public ChessPiece getPiece(ChessPosition position) {
         int row = position.getRow();
         int column = position.getColumn();
-        ChessPiece boardSpace = this.board[row-1][column-1];
-        if (boardSpace != null){
-            return boardSpace;
-        }
-        else{
-            return null;
-        }
+        return this.board[row-1][column-1];
     }
 
     /**
